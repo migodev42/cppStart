@@ -23,6 +23,7 @@ void getSales_data(Sales_data &d) {
 int computeSales_data(Sales_data &d1, Sales_data &d2, Sales_rs &rs) {
     using namespace std;
     if (d1.bookNo != d2.bookNo) {
+        cout << "两笔交易的ISBN编号不一致" << endl;
         return -1;
     }
     rs.bookNo = d1.bookNo;
