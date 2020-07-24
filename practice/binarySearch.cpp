@@ -29,6 +29,5 @@ int main() {
     }
 
     cout << "rs:" << target << " vs " << *mid << endl;
-    // cout << "Hello Wolrd\n";
     return 0;
 }
