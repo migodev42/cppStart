@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-// #include <Sales_data.h> /* 若Sales_data定以在另一个头文件Sales_data.h内 */
+// #include "Sales_data.h" /* 若Sales_data定以在另一个头文件Sales_data.h内 */
 struct Sales_data {
     std::string bookNo;
     unsigned unit_sold = 0;
