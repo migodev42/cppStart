@@ -10,9 +10,11 @@
             "args": [
                 "-Wall",
                 "-g",
-                "${file}",
+                // "${file}",      // 单个源文件编译
+                "${fileDirname}/*.cpp",  // 当前路径下所有源文件编译
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.out"
+                // "${fileDirname}/${fileBasenameNoExtension}.out",  // 单个源文件编译输出: 文件名.out
+                "${fileDirname}/main.out"  // 多个源文件编译输出: main.out
             ],
             "options": {
                 "cwd": "/usr/bin"
