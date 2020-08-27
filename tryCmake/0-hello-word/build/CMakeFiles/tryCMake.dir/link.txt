@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/tryCMake.dir/tutorial.cxx.o  -o tryCMake 

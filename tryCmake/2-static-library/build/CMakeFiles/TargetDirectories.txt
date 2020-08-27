@@ -1,0 +1,4 @@
+/home/leoy/LY/code/cppStart/tryCmake/2-static-library/build/CMakeFiles/rebuild_cache.dir
+/home/leoy/LY/code/cppStart/tryCmake/2-static-library/build/CMakeFiles/edit_cache.dir
+/home/leoy/LY/code/cppStart/tryCmake/2-static-library/build/CMakeFiles/main.dir
+/home/leoy/LY/code/cppStart/tryCmake/2-static-library/build/CMakeFiles/library.dir
