@@ -1,10 +1,12 @@
 # !bin/bash
 rm -rf ./build
-mkdir build
-cd build/
+# cd build/
+# cmake..
 
-cmake ..
+cmake -B ./build
+
+cd build/
 make
 
-echo "\n"
+echo ""
 echo "build successful!"
