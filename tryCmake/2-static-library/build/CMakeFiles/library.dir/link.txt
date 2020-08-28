@@ -1,2 +1,0 @@
-/usr/bin/ar qc release/lib/liblibrary.a  CMakeFiles/library.dir/compute.cpp.o
-/usr/bin/ranlib release/lib/liblibrary.a

@@ -1,3 +1,0 @@
-/home/leoy/LY/code/cppStart/tryCmake/build/CMakeFiles/rebuild_cache.dir
-/home/leoy/LY/code/cppStart/tryCmake/build/CMakeFiles/edit_cache.dir
-/home/leoy/LY/code/cppStart/tryCmake/build/CMakeFiles/tryCMake.dir
