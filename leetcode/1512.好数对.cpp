@@ -12,7 +12,7 @@ using std::cout;
 
 int numIdenticalPairs(vector<int>& nums) {
     unordered_map<int, int> m;
-    for (unsigned int i = 0; i < nums.size();++i) {
+    for (decltype(num.size()) i = 0; i < nums.size();++i) {
         ++m[nums[i]];
     }
     int ans = 0;
