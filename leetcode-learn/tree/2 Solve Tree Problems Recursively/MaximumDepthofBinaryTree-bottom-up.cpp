@@ -1,4 +1,5 @@
 #include <vector>
+#include <algorithm>
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -11,6 +12,8 @@
  * };
  */
 using std::vector;
+using std::max;
+
 struct TreeNode {
     int val;
     TreeNode* left;
