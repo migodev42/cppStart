@@ -33,21 +33,24 @@ struct TreeNode {
 };
 class Solution {
 public:
-    void traverse(TreeNode* root, vector<int> inorder, stack<int, vector<int>>& pstack) {
-        if (!root) return;
+    void traverse(TreeNode*& root, vector<int> inorder, vector<int>& pstack) {
+        if (pstack.size() == 0 || inorder.size() == 0)return;
+        if (!root) {
+            int rootval = pstack.back();
+            root = new TreeNode(rootval);
+        }
+        pstack.pop_back();
+
         auto iter = find(inorder.begin(), inorder.end(), root->val);
         vector<int> leftv(inorder.begin(), iter);
-        vector<int> rightv(iter, inorder.end());
+        vector<int> rightv(iter + 1, inorder.end());
 
+        traverse(root->right, rightv, pstack);
+        traverse(root->left, leftv, pstack);
     }
     TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
-        stack<int, vector<int>> pstack(postorder);
-        int rootval = pstack.top();
-        TreeNode* root = new TreeNode(rootval);
-        pstack.pop();
-        // cout << *pend << endl;
-        // cout << root->val << endl;
-        traverse(root, inorder, pstack);
+        TreeNode* root = nullptr;
+        traverse(root, inorder, postorder);
         return root;
     }
 };
@@ -56,6 +59,5 @@ int main() {
     Solution s;
     vector<int> inorder = { 9,3,15,20,7 };
     vector<int> postorder = { 9,15,7,20,3 };
-    ostream_iterator<int> out_iter(cout, ",");
     s.buildTree(inorder, postorder);
 }
