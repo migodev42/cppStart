@@ -18,3 +18,13 @@ If we want to add a new value after a given node prev, we should:
 - Link the "next" field in prev to cur.
 
 Unlike an array, we don’t need to move all elements past the inserted element. Therefore, you can insert a new node into a linked list in O(1) time complexity, which is very efficient.
+
+### Delete Operation - Singly Linked List 单链表删除节点
+
+- Find cur's previous node `prev` and its next node `next`.
+- Link `prev` to cur's next node `next`.
+
+
+
+Delete the First Node:
+- simply assign the next node to head
