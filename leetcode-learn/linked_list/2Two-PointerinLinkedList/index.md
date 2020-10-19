@@ -30,3 +30,36 @@ It is a safe choice to move the slow pointer `one step` at a time while moving t
 > What about other choices? Do they work? Would they be more efficient?
 
 
+Here we provide a template for you to solve the two-pointer problem in the linked list.
+**双指针解法框架：**
+``` cpp
+// Initialize slow & fast pointers
+ListNode* slow = head;
+ListNode* fast = head;
+/**
+ * Change this condition to fit specific problem.
+ * Attention: remember to avoid null-pointer error
+ **/
+while (slow && fast && fast->next) {
+    slow = slow->next;          // move slow pointer one step each time
+    fast = fast->next->next;    // move fast pointer two steps each time
+    if (slow == fast) {         // change this condition to fit specific problem
+        return true;
+    }
+}
+return false;   // change return value to fit specific problem
+```
+
+
+Tips:
+- 1. Always examine if the node is null before you call the next field.
+```
+Getting the next node of a null node will cause the null-pointer error. For example, before we run fast = fast.next.next, we need to examine both fast and fast.next is not null.
+```
+- 2. Carefully define the end conditions of your loop.
+```
+Run several examples to make sure your end conditions will not result in an endless loop. And you have to take our first tip into consideration when you define your end conditions.
+```
+
+we will run the loop up to N times
+空间复杂度O(1) 时间复杂度O(N)
