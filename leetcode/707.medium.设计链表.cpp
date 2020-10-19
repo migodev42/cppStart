@@ -19,7 +19,9 @@ public:
     
     /** Get the value of the index-th node in the linked list. If the index is invalid, return -1. */
     int get(int index) {
+        // 超出链表范围（index从0开始，size从1开始）
         if(index>size-1 || index <0) return -1;
+        
         Node * cur = dummyhead->next;
         while(index--){
             cur = cur -> next;
@@ -47,7 +49,8 @@ public:
     }
     
     /** Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted. */
-    void addAtIndex(int index, int val) {        
+    void addAtIndex(int index, int val) {   
+        // index可以等于size，因为add操作可以在尾部（index从0开始，size从1开始）
         if(index > size) return;
         Node* cur = dummyhead;
         
@@ -62,14 +65,16 @@ public:
     
     /** Delete the index-th node in the linked list, if the index is valid. */
     void deleteAtIndex(int index) {
-        if(index>=size || index<0) return;
+        // index不能等于size，因为delete操作的元素需要存在（index从0开始，size从1开始）
+        if(index>=size || index <0) return;
+        
         Node* cur = dummyhead;
         while(index--){
             cur = cur->next;
         }
 
         auto tmp = cur->next;
-        auto tail = tmp->next;
+        auto tail = tmp?tmp->next:nullptr;
         cur -> next = tail;
         delete tmp;
         --size;
