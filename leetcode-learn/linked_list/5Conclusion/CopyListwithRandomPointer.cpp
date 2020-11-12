@@ -9,6 +9,11 @@ using std::endl;
     - 在每个原有节点后插入copy
     - 将copy的random指向正确的位置
     - 解开origin和copy
+
+    [on空间方法](https://www.geeksforgeeks.org/a-linked-list-with-next-and-arbit-pointer/)
+    - 对每个节点映射一个copy节点
+    - random指向正确位置
+    - 解开origin和copy
 */
 class Node {
 public:
