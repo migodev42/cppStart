@@ -1,3 +1,9 @@
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+
 /**
  * Definition for singly-linked list.
  */
@@ -22,9 +28,35 @@ public:
         return size;
     }
     ListNode* rotateRight(ListNode* head, int k) {
+        if (!head || !k) return head;
         int size = getSize(head);
         int start_pos_from_end = k % size;
-        cout << size << start_pos_from_end << endl;
-        return head;
+        if (!start_pos_from_end) return head;
+
+        cout << "size: " << size << " pos from end: " << start_pos_from_end << endl;
+
+        ListNode* fast = head;
+        ListNode* slow = head;
+
+        while (start_pos_from_end--) {
+            fast = fast->next;
+        }
+
+        while (fast->next) {
+            fast = fast->next;
+            slow = slow->next;
+        }
+        cout << fast->val << endl;
+        cout << slow->val << endl;
+
+
+        ListNode* tmpHead = slow->next;
+        slow->next = nullptr;
+        ListNode* curr = tmpHead;
+        while (curr->next) {
+            curr = curr->next;
+        }
+        curr->next = head;
+        return tmpHead;
     }
 };
