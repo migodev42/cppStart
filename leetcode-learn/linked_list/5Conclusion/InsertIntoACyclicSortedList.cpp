@@ -1,5 +1,5 @@
-/* 
-    Given a sorted circular linked list, the task is to insert a new node in this circular list so that it remains a sorted circular linked list. 
+/*
+    Given a sorted circular linked list, the task is to insert a new node in this circular list so that it remains a sorted circular linked list.
 
     Input:
     LinkedList = 1->2->4
@@ -15,20 +15,71 @@
     data = 5
     Output: 1 4 5 7 9
 */
-struct ListNode {
+class Node {
+public:
     int val;
-    ListNode* next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode* next) : val(x), next(next) {}
+    Node* next;
+
+    Node() {}
+
+    Node(int _val) {
+        val = _val;
+        next = NULL;
+    }
+
+    Node(int _val, Node* _next) {
+        val = _val;
+        next = _next;
+    }
 };
 
 class Solution {
 public:
-    ListNode* insertIntoACyclicSortedList(ListNode* head, int k) {
-        if(!head){
-            
+    Node* createListNode(int k) {
+            Node* head = new Node(k);
+            head->next = head;
+            return head;
+    }
+    void insertToNext(Node* toInsert, int insertVal) {
+        Node* tmp = toInsert->next;
+        toInsert->next = new Node(insertVal);
+        toInsert->next->next = tmp;
+        return;
+    }
+    Node* insert(Node* head, int insertVal) {
+        if (!head) return createListNode(insertVal);
+        Node* curr = head->next;
+        Node* min_node = head;
+
+        // 找最小值节点
+        while (curr != head) {
+            if (curr->val < min_node->val) min_node = curr;
+            curr = curr->next;
         }
-        
+
+        // 插入到合适的位置
+        if (min_node->val > insertVal) {
+            Node* curr = min_node;
+            while (curr->next != min_node) {
+                curr = curr->next;
+            }
+            insertToNext(curr, insertVal);
+        }
+        else {
+            Node* curr = min_node;
+            while (curr->next != min_node) {
+                if (curr->next->val <= insertVal) {
+                    curr = curr->next;
+                }
+                else {
+                    insertToNext(curr, insertVal);
+                    break;
+                }
+            }
+            if (curr->next == min_node) {
+                insertToNext(curr, insertVal);
+            }
+        }
+        return head;
     }
 };
