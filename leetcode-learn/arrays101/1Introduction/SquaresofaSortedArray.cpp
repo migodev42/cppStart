@@ -8,7 +8,7 @@ class Solution {
 public:
     vector<int> sortedSquares(vector<int>& A) {
         if (!A.size()) return A;
-        if (A.size()) {
+        if (A.size()==1) {
             A[0] = pow(A[0], 2);
             return A;
         }
@@ -17,8 +17,7 @@ public:
             if (A[curr] >= 0) break;
             ++curr;
         }
-        int left = curr, right = curr + 1;
-
+        int left = curr-1, right = curr;
         vector<int> rs;
         while (left >= 0 && right < A.size()) {
             int leftVal = pow(A[left], 2);
@@ -34,7 +33,8 @@ public:
         }
 
         while (left >= 0) {
-            rs.push_back(pow(A[left--], 2));
+            rs.push_back(pow(A[left], 2));
+            --left;
         }
 
         while (right < A.size()) {
