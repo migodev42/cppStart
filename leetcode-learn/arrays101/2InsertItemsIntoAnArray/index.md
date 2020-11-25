@@ -16,3 +16,10 @@ Inserting a new element into an Array can take many forms:
 2 Inserting a new element at the beginning of the Array.
 3 Inserting a new element at any given index inside the Array.
 
+``` cpp
+void move(vector<int>& target, int frompos) {
+        for (int i = target.size() - 1; i > frompos; --i) {
+            target[i] = target[i - 1];
+        }
+}
+```

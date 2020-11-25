@@ -13,3 +13,10 @@ Deletion in an Array works in a very similar manner to insertion, and has the sa
 
 
 
+``` cpp
+void move(vector<int>& target, int frompos) {
+        for (int i = frompos+1  - 1; i < target.size(); ++i) {
+            target[i-1] = target[i];
+        }
+}
+```
