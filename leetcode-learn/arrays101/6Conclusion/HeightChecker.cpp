@@ -2,6 +2,7 @@
 #include <algorithm>
 
 using std::rand;
+using std::swap;
 using std::vector;
 
 class Solution {
