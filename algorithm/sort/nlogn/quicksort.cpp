@@ -73,4 +73,8 @@ public:
       quickSort(target, pv + 1, r);
     }
   }
-}
+  vector<int> main(vector<int>& nums) {
+    srand((unsigned)time(nullptr));
+    quickSort(nums, 0, nums.size() - 1);
+  }
+};
