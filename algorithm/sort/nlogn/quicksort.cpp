@@ -53,7 +53,7 @@ public:
     // 将比pivot小的数字swap到当前数组(l to r)最前面
     int sorted = l;
     for (int i = l; i < r; ++i) {
-      if (target[i] < target[r]) {        
+      if (target[i] < target[r]) {
         swap(target[i], target[sorted]);
         ++sorted;
       }
