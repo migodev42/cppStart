@@ -18,7 +18,7 @@ class Solution {
         sort(nums.begin(), nums.end());
         for (int first = 0; first < nums.size(); ++first) {
             /* 跳过不符合的值 */
-            if (nums[first] > 0) continue;
+            if (nums[first] > 0) break;
 
             /* 跳过相同的first */
             if (first != 0 && nums[first] == nums[first - 1]) {
@@ -37,6 +37,9 @@ class Solution {
             // O(N)，均摊下来，每次也向左移动一个位置，因此时间复杂度为 O(N)。
 
             for (int second = first + 1; second < nums.size(); ++second) {
+                /* 结束不符合的值 */
+                if (nums[first] + nums[second] > 0) break;
+
                 /* 跳过相同的second */
                 if (second != first + 1 && nums[second] == nums[second - 1]) {
                     continue;
