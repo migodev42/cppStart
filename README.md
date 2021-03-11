@@ -53,7 +53,9 @@ Edit `.vscode/tasks.json`
 - [代码随想录](https://github.com/youngyangyang04/leetcode-master)
     - 数组 二分法、双指针法、滑动窗口、模拟行为 https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
       - [x] 35 搜索插入位置 二分搜索 注意数组区间
-      - [x] 27 移除元素 双指针
+      - [x] 27 移除元素/数组去重 双指针
+        - 一个快指针不停取非重复数，非重复数swap到慢指针，
+        - 慢指针最终位置即新不重复数组
       - [x] 209 长度最小的子数组 双指针滑窗法
       - [x] 59 螺旋矩阵II 模拟顺时针画矩阵、循环不变式、注意数组区间
     - 链表 
@@ -88,6 +90,14 @@ Edit `.vscode/tasks.json`
       - [x] 两数之和 哈希表  o(n)
       - [x] 三数之和 排序+双指针  o(n^2)
       - [x] 四数之和 排序+双指针  o(n^3)
+      - [x] js数组扁平化 简单递归/迭代      
+      - [x] 打乱数组
+        - 伪随机数生成器，数组中每个数字与当前idx到末尾的一个随机idx进行swap
+        - **排列的相同机会**
+        - [knuth-shuffle算法](https://yjk94.wordpress.com/2017/03/17/%E6%B4%97%E7%89%8C%E7%9A%84%E6%AD%A3%E7%A1%AE%E5%A7%BF%E5%8A%BF-knuth-shuffle%E7%AE%97%E6%B3%95/)
+        - 标准库有shuffle实现(c++、js都有)
+        - seed不能设置为时间，不然无法通过用例..
+      - [ ] 旋转数组
     - 树 
       - [x] 129 求根到叶子节点数字之和 DFS 带参prev递归，非尾调用和尾调用版本
     
