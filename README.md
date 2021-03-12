@@ -89,6 +89,28 @@ Edit `.vscode/tasks.json`
         - 移除多余空格 移除首尾空格+移除字间空格+双指针移动+resize
         - 反转字符串 首尾双指针反转字符串
         - 反转单词 遍历+每个单词块中首尾双指针反转字符串
+      - [ ] 剑指Offer58-II.左旋转字符串
+        ```
+        例如 ：示例1中 输入：字符串abcdefg，n=2
+        反转区间为前n的子串 ：bacdefg
+        反转区间为n到末尾的子串：bagfedc
+        反转整个字符串：cdefgab
+        ```
+        - 反转0到n个字符串
+        - 反转n到末尾的字符串
+        - 反转整个字符串即是答案
+      - [ ] KMP算法：解决字符串匹配的问题
+        https://leetcode-cn.com/problems/implement-strstr/solution/bang-ni-ba-kmpsuan-fa-xue-ge-tong-tou-ming-ming-ba/
+        - **最长相等前后缀**
+        - 前缀表、后缀表：
+          - 前缀：包含首字母不包含尾字母的所有字符串
+          - 后缀：包含尾字母不包含首字母的所有字符串
+          - 一个字符没有前缀也没有后缀
+          - PMT中的值是字符串的**前缀集合**与**后缀集合**的交集中最长元素的长度
+        - 
+      - [ ] 28. 实现strStr kmp算法解决
+
+
   - 练习
     - 数组
       - [x] 两数之和 哈希表  o(n)
