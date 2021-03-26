@@ -133,7 +133,12 @@ Edit `.vscode/tasks.json`
       - [ ] 347 前 K 个高频元素 - 已学习
         - [ ] 建堆 堆排序
     - 二叉树
-      - [x] 知识点
+      - [x] 知识点 leetcode-learn/tree/二叉树知识点.md
+      - [x] 如何写好递归 leetcode-learn/tree/递归方法论.md  
+        - [x] 递归前中后序遍历 leetcode-learn/tree/1 Travels A Tree
+      - [ ] 迭代法前中后序遍历二叉树 
+        - 栈来模拟递归的函数调用栈
+      - [ ] 层序遍历
 - 练习
     - 数组
       - [x] 两数之和 哈希表  o(n)
@@ -160,3 +165,6 @@ Edit `.vscode/tasks.json`
         - N叉树的先序遍历/ 尾递归和非尾递归
       - [x] 102 二叉树的层序遍历: 
         - 队列实现、且push节点时需要记录层级
+      - [x] 107 二叉树的层序遍历2
+        - 队列实现、且push节点时需要记录层级
+        - 自底向上顺序，需要把结果数组reverse
