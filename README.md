@@ -168,3 +168,8 @@ Edit `.vscode/tasks.json`
       - [x] 107 二叉树的层序遍历2
         - 队列实现、且push节点时需要记录层级
         - 自底向上顺序，需要把结果数组reverse
+    - 二分查找
+      - [ ] 69 x的平方根 
+        - 1 二分查找/需要注意ans更新的时机
+        - 2 牛顿迭代法
+        - 3 袖珍计算器算法 https://leetcode-cn.com/problems/sqrtx/solution/x-de-ping-fang-gen-by-leetcode-solution/
