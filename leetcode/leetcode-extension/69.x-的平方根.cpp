@@ -14,8 +14,8 @@ class Solution {
         
         // 处理0的情况
         while (min <= max) {
-            int mid = min + (max - min) / 2;
-
+            int mid = (max + min) / 2;
+            
             // 处理数字溢出的边界情况
             if ((long long)mid * mid <= x) {
                 ans = mid; // 注意ans的更新时机
