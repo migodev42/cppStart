@@ -135,9 +135,14 @@ Edit `.vscode/tasks.json`
     - 二叉树
       - [x] 知识点 leetcode-learn/tree/二叉树知识点.md
       - [x] 如何写好递归 leetcode-learn/tree/递归方法论.md  
-        - [x] 递归前中后序遍历 leetcode-learn/tree/1 Travels A Tree
+        - [x] 递归前中后序遍历 leetcode-learn/tree/1 Travels A 
+        Tree
       - [ ] 迭代法前中后序遍历二叉树 
-        - 栈来模拟递归的函数调用栈
+        - [ ] 栈来模拟递归的函数调用栈
+          - [x] 递归前序&迭代前序
+          - [ ] 递归后序 & 迭代后序
+          - [ ] 递归中序 & 迭代中序
+        - [ ] 统一迭代写法
       - [ ] 层序遍历
 - 练习
     - 数组
