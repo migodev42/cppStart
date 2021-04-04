@@ -140,8 +140,8 @@ https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
   - [x] 知识点 leetcode-learn/tree/二叉树知识点.md
   - [x] 如何写好递归 leetcode-learn/tree/递归方法论.md  
     - [x] 递归前中后序遍历 leetcode-learn/tree/Travels A Tree
-  - [ ] 迭代法前中后序遍历二叉树 
-    - [ ] 栈来模拟递归的函数调用栈
+  - [x] 迭代法前中后序遍历二叉树 
+    - [x] 栈来模拟递归的函数调用栈
        - [x] 递归前序&迭代前序 中左右
        - [x] 递归后序 & 迭代后序 左右中 （（前序）中左右 -> （临时）中右左 -> （后序）左右中）
        - [x] 递归中序 & 迭代中序 左 中 右
