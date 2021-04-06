@@ -161,8 +161,10 @@ https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
     - **排列的相同机会**
     - [knuth-shuffle算法](https://yjk94.wordpress.com/2017/03/17/%E6%B4%97%E7%89%8C%E7%9A%84%E6%AD%A3%E7%A1%AE%E5%A7%BF%E5%8A%BF-knuth-shuffle%E7%AE%97%E6%B3%95/)
     - 标准库有shuffle实现(c++、js都有)
-    - seed不能设置为时间，不然无法通过用例..
+    - seed不能设置为时间，不然无法通过用例..    
   - [ ] 旋转数组
+  - [x] 80. 删除有序数组中的重复项 II 
+    - 双指针、cnt、区间
 - 树 
   - [x] 129 求根到叶子节点数字之和 DFS 带参prev递归，非用和尾调用版本
   - [x] 589 N叉树的前序遍历 
