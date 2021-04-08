@@ -58,10 +58,7 @@ class Solution {
     pair<TreeNode *, int> result;
     void dfs(TreeNode *root, int depth) {
         if (!root) return;
-
-        if (!root->left && !root->right) {
-            if (depth > result.second) result = {root, depth};
-        }
+        if (depth > result.second) result = {root, depth}; 
         dfs(root->left, depth + 1);
         dfs(root->right, depth + 1);
     }
