@@ -30,58 +30,32 @@ struct TreeNode {
 class Solution {
 public:
   vector<int> result;
-  void compareCnt(int cnt, int val) {
-    if (cnt > maxcnt) {
-      result.clear();
-      result.push_back(val);
-    }
-    else if (cnt == maxcnt) {
-      result.push_back(val);
-    }
-  }
   TreeNode* prev = nullptr;
-  int cnt = 0;
+  int cnt = 1;
   int maxcnt = 0;
   void traversal(TreeNode* curr) {
     if (!curr) return;
     traversal(curr->left);
-    if (prev) {
-      // bool isLeaf = !curr->left && !curr->right;
-      int prevval = prev->val;
-      int currval = curr->val;
 
-      // if(isLeaf){
-      //   compareCnt(cnt,)
-      // } 
-
-      if (prevval != currval) {
-        if (cnt > maxcnt) {
-          maxcnt = cnt;
-          result.clear();
-          result.push_back(currval);
-          cnt = 0;
-        }
-        else if (cnt == maxcnt) {
-          result.push_back(currval);
-        }
-
-      }
-      else {
-
-      }
-    }else{
+    if (!prev) {
       cnt = 1;
     }
-
-
-    if (prev) {
-      cout << prev->val;
+    else if (prev->val == curr->val) {
+      cnt++;
     }
     else {
-      cout << "x";
+      cnt = 1;
     }
     prev = curr;
-    cout << " " << curr->val << endl;
+    if (cnt > maxcnt) {
+      result.clear();
+      result.push_back(curr->val);
+      maxcnt = cnt;
+    }
+    else if (cnt == maxcnt) {
+      result.push_back(curr->val);
+    }
+    
     traversal(curr->right);
 
   }
