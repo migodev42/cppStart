@@ -263,7 +263,8 @@ https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
     - 相似题 654 最大二叉树 106 从中序与后序序列构造二叉树
   - [x] 538 把二叉搜索树转换为累加树
     - 顺序 右 中 左，额外一个值做累加
-  - [ ] 总结
+  - [ ] 二叉树总结 
+        https://mp.weixin.qq.com/s/-ZJn3jJVdF683ap90yIj4Q
 
 ### 练习
 
