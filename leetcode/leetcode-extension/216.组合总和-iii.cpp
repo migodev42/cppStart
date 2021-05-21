@@ -13,13 +13,16 @@ class Solution {
     vector<vector<int>> result;
     vector<int> path;
     void backtrack(int cnt, int target, int curr, int currSum) {
+        if (currSum > target) { // 剪枝操作
+            return;
+        }
         if (path.size() == cnt) {
-            if(currSum == target) result.push_back(path);            
+            if (currSum == target) result.push_back(path);
             return;
         }
         for (int i = curr; i <= 9; ++i) {
             path.push_back(i);
-            backtrack(cnt, target, i + 1, currSum+i);
+            backtrack(cnt, target, i + 1, currSum + i);
             path.pop_back();
         }
     }

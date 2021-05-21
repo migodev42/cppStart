@@ -302,6 +302,7 @@ https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
     - 回溯
   - [x] 3. 77 组合问题 剪枝优化
     -  **剪枝优化** 可以剪枝的地方就在递归中**每一层的for循环所选择的起始位置**（或者直接避免后序for循环）。如果for循环选择的起始位置之后的元素个数 已经不足 我们需要的元素个数了，那么就没有必要搜索了
+    -  剪枝操作可以在for循环中做break、continue，也可以在递归函数中return实现
   - [x] 216.组合总和III
     - int cnt-组合数量 int target-目标值, int curr-当前值, int currSum-当前sum
     - 注意sum值要在backtrack路径传递中才做累加，不然会影响当前层的currSum
