@@ -312,7 +312,8 @@ https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
     - 确定终止条件
     - 确定单层遍历逻辑
   - [x] 6. 小结
-  - [ ] 7. 39.组合总和 
+  - [x] 7. 39.组合总和 
+  - [ ] 8. 40.组合总和II
 ### 练习
 
 - 数组
