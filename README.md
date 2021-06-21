@@ -320,10 +320,12 @@ https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
     -  区分树层重复和树枝重复
     -  used数组记录，used[i - 1] == true树枝重复 used[i - 1] == false树层重复
   - [ ] 9. 131.分割回文串
-    - [ ] 回文串判断：双指针
+    - 回文串判断：首位双指针O(n)判断是否相等
+    - C++ string操作 substr
   - [x] 10 93.复原 IP 地址
     - 注意符合条件的ip的判断
     - 注意边界条件：1、ip地址前导0 2、不超过255，字符串转int
+    - string转int
 ### 练习
 
 - 数组

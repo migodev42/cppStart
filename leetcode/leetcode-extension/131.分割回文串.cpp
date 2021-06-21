@@ -33,12 +33,13 @@ class Solution {
   }
   void backtrack(const string const& s, int splitidx) {
     if (splitidx >= s.size()) {
-      result.push_back(path);
+      result.push_back(path);  // path都是符合回文的path，判断回文逻辑放到单层递归逻辑中
       return;
     }
-
+          
     for (int i = splitidx; i < s.size(); ++i) {
       if (isPalindrome(s, splitidx, i)) {
+        // 如何表示切割子串 [splitidx,i]
         string str = s.substr(splitidx, i - splitidx + 1);
         path.push_back(str);
       } else {  // 如果不是则直接跳过
