@@ -21,16 +21,36 @@ class Solution {
  public:
   vector<vector<string>> result;
   vector<string> path;
-  bool isPalindrome(vector<string>) {
-    
+  bool isPalindrome(const string const& s, int left, int right) {
+    while (left < right) {
+      if (s[left++] == s[right--]) {
+        continue;
+      } else {
+        return false;
+      }
+    }
+    return true;
   }
-  void backtrack() {
-    if (isPalindrome(path)) {
+  void backtrack(const string const& s, int splitidx) {
+    if (splitidx >= s.size()) {
       result.push_back(path);
+      return;
+    }
+
+    for (int i = splitidx; i < s.size(); ++i) {
+      if (isPalindrome(s, splitidx, i)) {
+        string str = s.substr(splitidx, i - splitidx + 1);
+        path.push_back(str);
+      } else {  // 如果不是则直接跳过
+        continue;
+      }
+
+      backtrack(s, i + 1);
+      path.pop_back();
     }
   }
   vector<vector<string>> partition(string s) {
-    backtrack();
+    backtrack(s, 0);
     return result;
   }
 };
