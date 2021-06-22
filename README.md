@@ -328,7 +328,7 @@ https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
     - string转int
   - [x] 11. 78.求子集问题    
     - 1、每一个path都是result 2、每个子集不同通过startIdx+1区分下层树的选择
-  - [ ] 12. 本周小结二
+  - [x] 12. 本周小结二
     -  对于组合问题，什么时候需要startIndex呢？
        - 如果是**一个集合**来求**组合**的话，就需要startIndex 
        - 如果是**多个集合**取**组合**，各个集合之间**相互不影响**，那么就不用startIndex
@@ -338,6 +338,7 @@ https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
       - 树枝去重，同一树枝上“使用过”
     - 切割问题，如何截取子串
     - 收集所有节点、收集叶子节点
+  - [ ] 13. 90.子集II
 ### 练习
 
 - 数组
