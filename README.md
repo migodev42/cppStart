@@ -326,6 +326,8 @@ https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
     - 注意符合条件的ip的判断
     - 注意边界条件：1、ip地址前导0 2、不超过255，字符串转int
     - string转int
+  - [ ] 11. 78.求子集问题    
+    - 1、每一个path都是result 2、每个子集不同通过startIdx+1区分下层树的选择
 ### 练习
 
 - 数组
