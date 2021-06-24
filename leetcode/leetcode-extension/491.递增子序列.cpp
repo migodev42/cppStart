@@ -3,19 +3,19 @@
  *
  * [491] 递增子序列
  */
-#include <vector>
 #include <unordered_set>
+#include <vector>
 
-using std::vector;
 using std::unordered_set;
+using std::vector;
 
 // @lc code=start
 class Solution {
  public:
   vector<vector<int>> result;
   vector<int> path;
-//   vector<bool> used;
-  
+  //   vector<bool> used;
+
   void backtrack(vector<int>& nums, int startIdx) {
     if (path.size() >= 2) {
       result.push_back(path);
@@ -24,16 +24,16 @@ class Solution {
       return;
     }
 
-    unordered_set<int> used;
+    vector<bool> used(200, false);
     for (int i = startIdx; i < nums.size(); ++i) {
       if (path.size() && nums[i] < path[path.size() - 1]) {
         continue;
       }
-      if (used.find(nums[i])!=used.end()) {
+      if (used[nums[i] + 100] == true) {
         continue;
-      }    
+      }
 
-      used.insert(nums[i]);
+      used[nums[i] + 100] = true;
       path.push_back(nums[i]);
       backtrack(nums, i + 1);
       path.pop_back();

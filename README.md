@@ -341,7 +341,10 @@ https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
   - [x] 13. 90.子集II
     - 1、收集N叉树所有节点 2、树层去重
   - [x] 14. 491.递增子序列
-    - 树层去重逻辑不能再使用排序后的used[i-1]去做判断，在每一层for时使用unordered_set记录当层已经使用过的数字
+    - 树层去重逻辑不能再使用排序后的used[i-1]去做判断，
+      - 在每一层for时使用unordered_set记录当层已经使用过的数字
+      - 使用size为200的数字做哈希更加方便 used.resize(200,false) used[nums[i]+100]
+  - [ ] 15. 
 ### 练习
 
 - 数组
