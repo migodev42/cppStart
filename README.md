@@ -344,7 +344,10 @@ https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
     - 树层去重逻辑不能再使用排序后的used[i-1]去做判断，
       - 在每一层for时使用unordered_set记录当层已经使用过的数字
       - 使用size为200的数字做哈希更加方便 used.resize(200,false) used[nums[i]+100]
-  - [ ] 15. 
+  - [x] 15. 46.全排列
+    - 这里和组合问题、切割问题和子集问题最大的不同就是for循环里不用startIndex了。
+    - 因为排列问题，每次都要从头开始搜索
+    - 而used数组，其实就是记录此时path里都有哪些元素使用了，一个排列里一个元素只能使用一次。
 ### 练习
 
 - 数组
