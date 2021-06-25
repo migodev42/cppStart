@@ -365,6 +365,9 @@ https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
     - unorderd_set 在横向的时候记录used
     - 数组 在横向的时候记录used
   - [ ] 19. 332.重新安排行程
+  - [x] 20. 51.N 皇后
+    - 回溯剪枝：左上方 右上方 正上方 不能有Q
+  - [ ] 21. 37. 解数独
 ### 练习
 
 - 数组
