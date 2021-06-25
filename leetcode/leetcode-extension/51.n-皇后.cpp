@@ -8,7 +8,11 @@
 
 using std::string;
 using std::vector;
+/* 
+  "Q..."                      ".Q.." "..Q." "...Q"
+-"Q..."- ".Q.." "..Q." "...Q"  
 
+ */
 // @lc code=start
 class Solution {
  public:
