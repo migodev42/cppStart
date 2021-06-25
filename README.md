@@ -368,6 +368,7 @@ https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
   - [x] 20. 51.N 皇后
     - 回溯剪枝：左上方 右上方 正上方 不能有Q
   - [ ] 21. 37. 解数独
+    - 二维递归
 ### 练习
 
 - 数组
