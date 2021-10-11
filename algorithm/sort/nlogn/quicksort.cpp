@@ -42,6 +42,7 @@ public:
   }
 };
 
+/* 双指针快排 */
 class QuickSort {
 public:
   /* 选取pivot, 并排序数组 */
