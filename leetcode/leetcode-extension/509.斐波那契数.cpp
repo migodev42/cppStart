@@ -23,7 +23,7 @@ class Solution {
     // 注意循环次数n-1
     for (int i = 0; i < n-1 ; ++i) {      
       int tmp  = curr;  // 注意由于curr值要更新，所以需要用一个tmp值缓存一下
-      curr = prev + curr; // 本轮的curr等于前两个数字相加
+      curr = prev + curr; // 本轮的curr等于前两个数字相加 dp[i] = dp[i-1] + dp[i-2]
       prev = tmp; // 更新prev为上一轮的curr
       
     }
