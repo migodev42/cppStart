@@ -20,13 +20,15 @@ class Solution {
     int n = obstacleGrid[0].size();  // 列
     vector<vector<int>> dp(m, vector<int>(n));
 
+
+    // 初始化[0][n]和[m][0]的边
+    // 当遇到有障碍时，后面的路径都为0
     for (int i = 0; i < m; ++i) {
       if (obstacleGrid[i][0]) {
         break;
       }
       dp[i][0] = 1;
     }
-
     for (int j = 0; j < n; ++j) {
       if (obstacleGrid[0][j]) {
         break;
@@ -34,8 +36,10 @@ class Solution {
       dp[0][j] = 1;
     }
 
+
     for (int i = 1; i < m; ++i) {
       for (int j = 1; j < n; ++j) {
+        // 当有障碍时，当前路径为0，否则为dp[i - 1][j] + dp[i][j - 1]之和
         if (obstacleGrid[i][j]) {
           dp[i][j] = 0;
         } else {
