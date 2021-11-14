@@ -417,6 +417,8 @@ https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
   - [x] [63] 不同路径 II
   - [x] [343] 整数拆分
   - [x] [96] 不同的二叉搜索树
+  - 背包问题系列
+    - 01背包
 ### 练习
 
 - 数组
