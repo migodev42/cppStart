@@ -416,6 +416,7 @@ https://mp.weixin.qq.com/s/LIfQFRJBH5ENTZpvixHEmg
   - [x] [62] 不同路径
   - [x] [63] 不同路径 II
   - [x] [343] 整数拆分
+  - [x] [96] 不同的二叉搜索树
 ### 练习
 
 - 数组
