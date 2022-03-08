@@ -8,7 +8,7 @@ int main() {
     using std::string;
 
     /* text为一个有序序列 */
-    string text = {"abcdefghijklmnopqrstuvwxyz"};
+    string text = "abcdefghijklmnopqrstuvwxyz";
 
     char target = 'y';
 

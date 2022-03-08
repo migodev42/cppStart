@@ -13,8 +13,10 @@
                 "${file}",      // 单个源文件编译
                 // "${fileDirname}/*.cpp",  // 当前路径下所有源文件编译
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.out",  // 单个源文件编译输出: 文件名.out
-                // "${fileDirname}/main.out"  // 多个源文件编译输出: main.out
+                "${fileDirname}/${fileBasenameNoExtension}",  // 单个源文件编译输出: 文件名.out
+                "-std=c++20",
+                "-std=c++20", // 注意指定 c++ 标准
+                // "${fileDirname}/main.out"  // 多个源文件编译时，输出到同一个文件: main.out
             ],
             "options": {
                 "cwd": "/usr/bin"
