@@ -10,6 +10,10 @@ class Maze {
 
 }
 
+class MazeGame {
+  CreateMaze()
+}
+
 class Room {
   roomNumber  
   Enter()
@@ -36,3 +40,6 @@ Maze --* Room
 ```
 类 MapSite 是所有迷宫组件的公共抽象类，MapSite 仅定义了一个操作 Enter , 它的含义决定于你在进入什么。如果你进入一个房间，那么你的位置会发生改变。如果你试图进入一扇门：如果门开着，你进入另一个房间；如果门关着，那么你就会碰壁。
 
+Enter 为更复杂的游戏操作提供了一个简单基础。
+
+Room 是 MapSite 的一个子类
