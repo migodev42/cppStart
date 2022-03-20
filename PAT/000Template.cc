@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <sstream> // 字符串流
+#include <climits>
 
 using namespace std;
 
@@ -19,17 +21,26 @@ public:
 //   return 0;
 // }
 
-// 多行输入
-int main() {
+vector<string> getMutiLines() {
   string line;
-  Solution s;
   vector<string> lines;
-
+  int caseCount = 0;
   while (getline(cin, line)) {
     if (line.empty()) {
       break;
     }
+    if (!caseCount) {
+      caseCount = stoi(line);
+      continue;
+    }
     lines.push_back(line);
   }
+  return lines;
+}
+
+// 多行输入
+int main() {
+  Solution s;
+  vector<string> lines = getMutiLines();
   return 0;
 }
