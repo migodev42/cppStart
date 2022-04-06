@@ -8,37 +8,39 @@ using namespace std;
 
 /*
 
-3 5 6 7 8 11 
+3 5 6 7 8 11
 “不能被其他子串覆盖”，从子串尾部筛选，直到最后只剩一条匹配
 1 所有匹配
 ...
 5 4条匹配
-此时有两条路径 3 和 10 
+此时有两条路径 3 和 10
 继续 3 只剩一条匹配，加入结果集
-继续 10 20 ... 17 
+继续 10 20 ... 17
 11 只剩一条匹配 加入结果集
 
-5 8 4 2 1 
-8 4 2 1 
-3 5 8 4 2 1 
-11 17 26 13 20 10 5 8 4 2 1 
-4 2 1 
-17 26 13 20 10 5 8 4 2 1 
+5 8 4 2 1
+8 4 2 1
+3 5 8 4 2 1
+11 17 26 13 20 10 5 8 4 2 1
+4 2 1
+17 26 13 20 10 5 8 4 2 1
 
  */
 class Solution {
 public:
-  int Callatz(int num) {
+  unordered_map<int, bool> Callatz(int num) {
+    unordered_map<int, bool> result;
     while (num != 1) {
       if (num % 2 == 0) {
         num = num / 2;
       } else {
         num = (num * 3 + 1) / 2;
       }
+      result[num] = true;
       cout << num << " ";
     }
     cout << endl;
-    return 0;
+    return result;
   }
   int CallatzAdvance(int num) { return 0; }
 };
@@ -72,8 +74,17 @@ vector<string> getMutiLines() {
 
 // 多行输入
 int main() {
+  int count = 0;
+  getline(cin, count);
+  
+  while(count--){
+    getline(cin, )
+  }
+
   Solution s;
-  // vector<string> lines = getMutiLines();
+  vector<string> lines = getMutiLines();
+  unordered_map<int, bool> covered;
+
   s.Callatz(3);
   s.Callatz(5);
   s.Callatz(6);

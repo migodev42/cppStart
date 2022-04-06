@@ -64,6 +64,7 @@
       "iomanip": "cpp",
       "queue": "cpp",
       "__split_buffer": "cpp",
-      "__availability": "cpp"
+      "__availability": "cpp",
+      "__locale": "cpp"
     }
 }

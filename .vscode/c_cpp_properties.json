@@ -10,6 +10,17 @@
             "cppStandard": "c++20",
             "intelliSenseMode": "macos-clang-arm64", // gcc-x64
             "cStandard": "c11"
+        },
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/bin/clang"
         }
     ],
     "version": 4
